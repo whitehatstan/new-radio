@@ -1,0 +1,59 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кастомные стили для плеера */
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-button {
+  background-color: #1db954; /* Зелёный цвет Spotify */
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.player-button:hover { 
+  background-color: #1ed760; /* Более светлый зелёный */
+}
+
+.player-button-secondary {
+  background-color: #f3f4f6; /* Серый цвет для кнопок "Назад" и "Вперёд" */
+  color: #4b5563; /* Тёмно-серый цвет текста */
+  padding: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.player-button-secondary:hover {
+  background-color: #e5e7eb; /* Более светлый серый */
+}
+
+.volume-slider {
+  width: 100%;
+  accent-color: #1db954; /* Зелёный цвет Spotify */
+}
+
+/* Анимации */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-custom {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Обложка плейлиста */
+.playlist-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
